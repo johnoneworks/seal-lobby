@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import { Switch, Route, Redirect } from "react-router-dom";
+import Games from "./Pages/Games/Games";
 import Movies from "./Pages/Movies/Movies";
 import TvShow from "./Pages/TVShows/TvShow";
 import MovieItemPage from "./Pages/MovieItemPage/MovieItemPage";
@@ -47,7 +48,8 @@ class App extends React.Component {
       <div>
         <Header currentRoute={this.props.location.pathname} />
         <Switch>
-          <Route exact path="/" component={Movies} />
+          <Route exact path="/" component={Games} />
+          <Route path="/games" component={Games} />
           <Route path="/movies/:title" component={MovieItemPage} />
           <Route path="/movies" component={Movies} />
           <Route path="/tvshows/:name" component={TVShowItemPage} />

@@ -31,6 +31,14 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
           </Link>
         )}
 
+        <Link className="overlay__option" to="games">
+          Games
+        </Link>
+
+        <Link className="overlay__option" to="/mylist">
+          My List
+        </Link>
+
         <Link className="overlay__option" to="/movies">
           Movies
         </Link>
@@ -39,9 +47,7 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
           TV Shows
         </Link>
 
-        <Link className="overlay__option" to="/mylist">
-          My List
-        </Link>
+        
 
         {currentUser ? (
           <div

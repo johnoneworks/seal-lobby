@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import gameReducer from "./Game/game-reducer";
 import movieReducer from "./Movie/movie-reducer";
 import TVReducer from "./TVShow/tv-reducer";
 import userReducer from "./User/user-reducer";
@@ -15,6 +16,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+  game: gameReducer,
   movie: movieReducer,
   tv: TVReducer,
   user: userReducer,

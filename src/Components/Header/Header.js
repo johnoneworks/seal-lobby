@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../Assets/logo.png";
+//import Logo from "../../Assets/logo.png";
+import Logo from "../../Assets/owLogo.png";
 import "./Header.scss";
 import { withRouter } from "react-router";
 import SearchBar from "../SearchBar/SearchBar";
@@ -16,15 +17,23 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavMenu from "./NavMenu";
 
-const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
+const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden }) => {
   return (
     <div className="header">
-      <div className="header__logo-box" onClick={() => history.push("/movies")}>
+      <div className="header__logo-box" onClick={() => history.push("/")}>
         <img src={Logo} alt="logo" className="header__logo" />
       </div>
 
       <div className="header__options">
         <div className="header__options-primary">
+          <Link className="header__option" to="/games">
+            Games
+          </Link>
+
+          <Link className="header__option" to="/mylist">
+            My List
+          </Link>
+
           <Link className="header__option" to="/movies">
             Movies
           </Link>
@@ -33,9 +42,7 @@ const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
             TV Shows
           </Link>
 
-          <Link className="header__option" to="/mylist">
-            My List
-          </Link>
+
         </div>
 
         <div className="header__searchbar">
@@ -55,18 +62,18 @@ const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
             </div>
           </div>
         ) : (
-          <div className="header__options-secondary">
-            <Link className="header__option" to="">
-              Hi, Guest
+            <div className="header__options-secondary">
+              <Link className="header__option" to="">
+                Hi, Guest
             </Link>
-            <Link
-              className="header__option header__option--signin"
-              to="/signin"
-            >
-              Sign In
+              <Link
+                className="header__option header__option--signin"
+                to="/signin"
+              >
+                Sign In
             </Link>
-          </div>
-        )}
+            </div>
+          )}
       </div>
       <FontAwesomeIcon
         icon={faBars}

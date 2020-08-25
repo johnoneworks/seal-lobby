@@ -14,6 +14,7 @@ export function getMovies() {
     fetchData().then(data => {
       const movieData = data.map(({ results }) => results);
       var newArray = Array.prototype.concat.apply([], movieData);
+      console.log("getMovies fetchData then");
       console.log(data);
       console.log(newArray);
       dispatch({
@@ -24,6 +25,9 @@ export function getMovies() {
     fetchGrid().then(data => {
       const movieGridData = data.map(({ results }) => results[0]);
       var newArray = Array.prototype.concat.apply([], movieGridData);
+      console.log("getMovies fetchGrid then");
+      console.log(data);
+      console.log(newArray);
       dispatch({
         type: MovieActionTypes.SET_MOVIE_GRID_DATA,
         payload: newArray

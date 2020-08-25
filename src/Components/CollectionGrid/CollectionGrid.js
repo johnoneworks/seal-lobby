@@ -1,7 +1,9 @@
 import React from "react";
 import "./CollectionGrid.scss";
 import CollectionGridItem from "../CollectionGridItem/CollectionGridItem";
+import CollectionGridItem2 from "../CollectionGridItem/CollectionGridItem2";
 import { connect } from "react-redux";
+import { selectGameGridItems } from "../../Redux/Game/game-selectors";
 import { selectMovieGridItems } from "../../Redux/Movie/movie-selectors";
 import { selectTVGridItems } from "../../Redux/TVShow/tv-selectors";
 import {
@@ -18,7 +20,7 @@ class CollectionGrid extends React.Component {
   }
 
   render() {
-    const { movieGridItems, tvShowGridItems, movies, tvshow } = this.props;
+    const { gameGridItems, movieGridItems, tvShowGridItems, games, movies, tvshow } = this.props;
     return (
       <div className="collection-grid">
         <span className="collection-grid__left-arrow">
@@ -30,6 +32,11 @@ class CollectionGrid extends React.Component {
         </span>
         <div className="collection-grid__outer" ref={this.gridRef}>
           <div className="collection-grid__inner">
+            {games
+              ? gameGridItems.map(item => (
+                  <CollectionGridItem2 key={item.id} item={item} />
+                ))
+              : null}
             {movies
               ? movieGridItems.map(item => (
                   <CollectionGridItem key={item.id} item={item} />
@@ -55,6 +62,7 @@ class CollectionGrid extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  gameGridItems: selectGameGridItems(state),
   movieGridItems: selectMovieGridItems(state),
   tvShowGridItems: selectTVGridItems(state)
 });

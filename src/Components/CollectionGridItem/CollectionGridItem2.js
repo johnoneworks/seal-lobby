@@ -1,21 +1,28 @@
 import React from "react";
-import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../Config/config";
+import PP from "../../MockData/100001.jpg";
+import PW from "../../MockData/100002.jpg";
+import SG from "../../MockData/100003.jpg";
+
 import "./CollectionGridItem.scss";
 import AddToList from "../AddToList/AddToList";
 
+const BANNER_GALLERY = [
+  PP,
+  PW,
+  SG,
+];
 
-// NOTE: There is a CollectionGridItem2!
-const CollectionGridItem = ({ item, listItems, addItem }) => {
-  const { title, overview, backdrop_path, poster_path, name } = item;
+const CollectionGridItem2 = ({ item, listItems, addItem }) => {
+  const { title, overview, backdrop_path, poster_path, name, id } = item;
   return (
     <div className="grid-item">
       <img
-        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`}
+        src={BANNER_GALLERY[id - 100001]}
         alt="movie"
         className="grid-item__img"
       />
       <img
-        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${poster_path}`}
+        src={BANNER_GALLERY[id - 100001]}
         alt="movie"
         className="grid-item__img grid-item__mobile-img"
       />
@@ -29,4 +36,4 @@ const CollectionGridItem = ({ item, listItems, addItem }) => {
   );
 };
 
-export default CollectionGridItem;
+export default CollectionGridItem2;
