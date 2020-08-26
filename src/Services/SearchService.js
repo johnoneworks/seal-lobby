@@ -1,3 +1,5 @@
+// REVIEWED, this still need to support search in our API
+
 import { API_URL, API_KEY } from "../Config/config";
 
 export const fetchSearchData = value => {

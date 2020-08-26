@@ -1,3 +1,4 @@
+// TODO: collection assignment looks important
 const INITIAL_STATE = {
   collection: [
     {
@@ -14,19 +15,19 @@ const INITIAL_STATE = {
     },
     {
       id: 3,
-      title: "Highest Grossing",
+      title: "New Releases",
       start: 20,
       end: 30
     },
     {
       id: 4,
-      title: "New Releases",
+      title: "You Might Like This",
       start: 30,
       end: 40
     },
     {
       id: 5,
-      title: "Most Liked",
+      title: "Since You've Played PP",
       start: 40,
       end: 50
     },

@@ -7,6 +7,11 @@ export const selectSearchItems = createSelector(
   search => search.searchItems
 );
 
+export const selectSearchedGameByTitle = (id) => createSelector(
+  [selectSearchItems],
+  searchItems => searchItems.filter(items => items.title ? (items.id === id) : null)
+);
+
 export const selectSearchedMovieByTitle = (id) => createSelector(
   [selectSearchItems],
   searchItems => searchItems.filter(items => items.title ? (items.id === id) : null)

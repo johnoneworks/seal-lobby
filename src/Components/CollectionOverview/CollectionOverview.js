@@ -1,3 +1,5 @@
+// REVIEWED, collection reducer looks to be demo only
+
 import React from "react";
 import "./CollectionOverview.scss";
 import CollectionPreview from "../CollectionPreview/CollectionPreview";

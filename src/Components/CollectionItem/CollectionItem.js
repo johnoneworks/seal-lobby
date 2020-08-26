@@ -1,3 +1,4 @@
+// REVIEWED
 import React from "react";
 import { GRID_GALLERY } from "../../MockData/mockData";
 import { IMAGE_BASE_URL, GRID_IMAGE_SIZE } from "../../Config/config";

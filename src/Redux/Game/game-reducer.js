@@ -27,10 +27,28 @@ const gameReducer = (state = INITIAL_STATE, action) => {
     case GameActionTypes.SET_GAME_ADDITIONAL_DATA: {
       return {
         ...state,
-        gameCast: payload.credits.cast,
+        // Very Dirty
+        gameCast:  [
+          {
+              cast_id: 12,
+              character: "The Protagonist",
+              credit_id: "5cab21a50e0a264c7df637a6",
+              gender: 2,
+              id: 1117313,
+              name: "John David Washington",
+              order: 0,
+              profile_path: "/27C77ni5XmlgkJVbomXPC4tHWVd.jpg"
+          }
+      ],
+        /*
+        gameCast: (payload && payload.credits) ? payload.credits.cast : [],
+        */
+        /*
         gameVideos: payload.videos.results.length
           ? payload.videos.results[0].key
           : "no_trailer_found"
+        */
+        gameVideos: "no_trailer_found"
       };
     }
 

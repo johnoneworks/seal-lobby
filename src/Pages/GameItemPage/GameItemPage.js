@@ -4,14 +4,15 @@ import "./GameItemPage.scss";
 import { connect } from "react-redux";
 import ItemPageOverviewContainer from "../../Components/ItemPageOverview/ItemPageOverviewContainer";
 import {
-  selectMovieItems,
-  selectIsMovieFetching
-} from "../../Redux/Movie/movie-selectors";
-import { getMovies } from "../../Redux/Movie/movie-actions";
+  selectGameItems,
+  selectIsGameFetching
+} from "../../Redux/Game/game-selectors";
 
-class MovieItemPage extends React.Component {
+import { getGames } from "../../Redux/Game/game-actions";
+
+class GameItemPage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(getMovies());
+    this.props.dispatch(getGames());
     ReactDOM.findDOMNode(this).scrollIntoView();
   }
 
@@ -23,7 +24,7 @@ class MovieItemPage extends React.Component {
         <ItemPageOverviewContainer
           params={this.props.match.params}
           state={this.props.location ? this.props.location.state : ""}
-          movies
+          games
         />
       </div>
     );
@@ -31,8 +32,8 @@ class MovieItemPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  movieData: selectMovieItems(state),
-  isFetching: selectIsMovieFetching(state)
+  gameData: selectGameItems(state),
+  isFetching: selectIsGameFetching(state)
 });
 
-export default connect(mapStateToProps)(MovieItemPage);
+export default connect(mapStateToProps)(GameItemPage);

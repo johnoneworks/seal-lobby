@@ -1,9 +1,11 @@
+// REVIEWED
+
 import React from "react";
 import ReactDOM from "react-dom";
 import "./CollectionPreview.scss";
 import CollectionItem from "../CollectionItem/CollectionItem";
 import { connect } from "react-redux";
-import { selectGameItems, selectGameGridItems } from "../../Redux/Game/game-selectors";
+import { selectGameItems } from "../../Redux/Game/game-selectors";
 import { selectMovieItems } from "../../Redux/Movie/movie-selectors";
 import { selectTVItems } from "../../Redux/TVShow/tv-selectors";
 import {
@@ -103,7 +105,7 @@ class CollectionPreview extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  gameItems: selectGameGridItems(state),
+  gameItems: selectGameItems(state),
   movieItems: selectMovieItems(state),
   tvItems: selectTVItems(state)
 });

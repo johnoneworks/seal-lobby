@@ -1,3 +1,5 @@
+// REVIEWED
+
 import React from "react";
 import "./Spinner.scss";
 

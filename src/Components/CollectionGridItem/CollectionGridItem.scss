@@ -23,7 +23,7 @@
 
   &__img_demo {
     width: 100vw;
-    height: 500px;
+    height: auto;
   
     @media screen and (max-width: 800px) {
       display: none;

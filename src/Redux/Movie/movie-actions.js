@@ -43,7 +43,10 @@ export const getMoviesAdditionalSuccess = () => ({
 
 export function getAdditionalMovieData(id) {
   return dispatch => {
+    
     fetchAdditionalMovieData(id).then(data => {
+      console.log("getAdditionalMovieData");
+      console.log(data);
       dispatch({
         type: MovieActionTypes.SET_MOVIE_ADDITIONAL_DATA,
         payload: data

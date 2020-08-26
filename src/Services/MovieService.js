@@ -16,5 +16,9 @@ export const fetchData = () => {
 
 export const fetchAdditionalMovieData = id => {
   const url = `${API_URL}movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits&language=en-US`;
-  return fetch(url).then(response => response.json());
+  return fetch(url).then(response => {
+    console.log("fetch additional");
+    console.log(response.data);
+    return response.json();
+  });
 };

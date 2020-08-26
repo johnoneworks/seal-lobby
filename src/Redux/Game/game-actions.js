@@ -1,3 +1,5 @@
+// REVIEWED
+
 import GameActionTypes from "./game-types";
 import {
     fetchData,
