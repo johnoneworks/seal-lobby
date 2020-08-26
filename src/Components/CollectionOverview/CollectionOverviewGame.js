@@ -1,5 +1,3 @@
-// REVIEWED
-
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
@@ -7,15 +5,15 @@ import { compose } from "redux";
 import { selectIsGameFetching } from "../../Redux/Game/game-selectors";
 
 import WithSpinnerGame from "../WithSpinner/WithSpinnerGame";
-import CollectionGrid from "./CollectionGrid";
+import CollectionOverview from "./CollectionOverview";
 
 const mapStateToProps = createStructuredSelector({
-    isGameGridLoading: selectIsGameFetching,
+    isGameOverviewLoading: selectIsGameFetching,
 });
 
-const CollectionGridGame = compose(
+const CollectionOverviewGame = compose(
     connect(mapStateToProps),
     WithSpinnerGame
-)(CollectionGrid);
+)(CollectionOverview);
 
-export default CollectionGridGame;
+export default CollectionOverviewGame;

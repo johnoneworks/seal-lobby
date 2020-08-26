@@ -1,3 +1,5 @@
+// REVIEWED
+
 import { createSelector } from 'reselect';
 
 const selectList = state => state.list;
@@ -5,6 +7,11 @@ const selectList = state => state.list;
 export const selectListItems = createSelector(
   [selectList],
   list => list.listItems
+);
+
+export const selectListGameByTitle = (id) => createSelector(
+  [selectListItems],
+  listItems => listItems.filter(items => items.title ? (items.id === id) : null)
 );
 
 export const selectListMovieByTitle = (id) => createSelector(

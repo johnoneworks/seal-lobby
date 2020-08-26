@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {selectGameByTitle} from "../../Redux/Game/game-selectors";
 import {selectMovieByTitle} from '../../Redux/Movie/movie-selectors';
 import {selectTVByTitle} from '../../Redux/TVShow/tv-selectors';
 import ItemPage from '../../Components/ItemPage/ItemPage';

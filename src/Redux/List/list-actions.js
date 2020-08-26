@@ -1,3 +1,5 @@
+// REVIEWED
+
 import ListActionTypes from './list-types';
 
 export const addItem = item => ({

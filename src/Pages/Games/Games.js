@@ -9,8 +9,8 @@ import { getGames } from "../../Redux/Game/game-actions";
 
 const CollectionGridGame = React.lazy(() => import("../../Components/CollectionGrid/CollectionGridGame"));
 
-const CollectionOverviewMovie = React.lazy(() =>
-    import("../../Components/CollectionOverview/CollectionOverviewMovie")
+const CollectionOverviewGame = React.lazy(() =>
+    import("../../Components/CollectionOverview/CollectionOverviewGame")
 );
 
 const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
@@ -25,7 +25,7 @@ class Games extends React.Component {
             <div className="games">
                 <Suspense fallback={<div></div>}>
                     <CollectionGridGame games />
-                    <CollectionOverviewMovie games />
+                    <CollectionOverviewGame games />
                     <Footer />
                 </Suspense>
             </div>

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./CollectionPreview.scss";
 import CollectionItem from "../CollectionItem/CollectionItem";
 import { connect } from "react-redux";
+import { selectGameItems, selectGameGridItems } from "../../Redux/Game/game-selectors";
 import { selectMovieItems } from "../../Redux/Movie/movie-selectors";
 import { selectTVItems } from "../../Redux/TVShow/tv-selectors";
 import {
@@ -34,7 +35,8 @@ class CollectionPreview extends React.Component {
   };
 
   render() {
-    const { title,movieItems,tvItems,start,end,movies,tvshow } = this.props;
+    const { title, gameItems, movieItems, tvItems, start, end, games, movies, tvshow } = this.props;
+    const gameData = gameItems.slice(start, end);
     const movieData = movieItems.slice(start, end);
     const tvData = tvItems.slice(start, end);
     return (
@@ -58,25 +60,39 @@ class CollectionPreview extends React.Component {
               />
             </span>
             <div className="collection-preview__inner" ref={this.divRef}>
+              {games
+                ? gameData.map(item => (
+                  <CollectionItem
+                    key={item.id}
+                    item={item}
+                    games={games}
+                    movies={movies}
+                    tvshow={tvshow}
+                    demo
+                  />
+                ))
+                : null
+              }
+
               {movies
                 ? movieData.map(item => (
-                    <CollectionItem
-                      key={item.id}
-                      item={item}
-                      movies={movies}
-                      tvshow={tvshow}
-                    />
-                  ))
+                  <CollectionItem
+                    key={item.id}
+                    item={item}
+                    movies={movies}
+                    tvshow={tvshow}
+                  />
+                ))
                 : null}
               {tvshow
                 ? tvData.map(item => (
-                    <CollectionItem
-                      key={item.id}
-                      item={item}
-                      movies={movies}
-                      tvshow={tvshow}
-                    />
-                  ))
+                  <CollectionItem
+                    key={item.id}
+                    item={item}
+                    movies={movies}
+                    tvshow={tvshow}
+                  />
+                ))
                 : null}
             </div>
           </div>
@@ -87,6 +103,7 @@ class CollectionPreview extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  gameItems: selectGameGridItems(state),
   movieItems: selectMovieItems(state),
   tvItems: selectTVItems(state)
 });

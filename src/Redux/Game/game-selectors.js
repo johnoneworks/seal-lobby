@@ -1,3 +1,5 @@
+// REVIEWED
+
 import { createSelector } from "reselect";
 import { FixString } from "../../Utils/FixString";
 

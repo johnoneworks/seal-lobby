@@ -1,3 +1,5 @@
+// REVIEWED
+
 import $ from "jquery";
 
 export const LeftGridArrow = node => {

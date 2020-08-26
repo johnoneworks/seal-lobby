@@ -21,6 +21,15 @@
     }
   }
 
+  &__img_demo {
+    width: 100vw;
+    height: 500px;
+  
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
   &__mobile-img {
     @media screen and (min-width: 800px) {
       display: none;
@@ -28,6 +37,16 @@
     @media screen and (max-width: 800px) {
       display: block;
       height: auto;
+    }
+  }
+
+  &__mobile-img_demo {
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+    @media screen and (max-width: 800px) {
+      display: block;
+      height: 300px;
     }
   }
 

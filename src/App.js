@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Games from "./Pages/Games/Games";
 import Movies from "./Pages/Movies/Movies";
 import TvShow from "./Pages/TVShows/TvShow";
+import GameItemPage from "./Pages/GameItemPage/GameItemPage";
 import MovieItemPage from "./Pages/MovieItemPage/MovieItemPage";
 import TVShowItemPage from "./Pages/TVShowItemPage/TVShowItemPage";
 import SignIn from "./Pages/SignIn/SignIn";
@@ -49,6 +50,7 @@ class App extends React.Component {
         <Header currentRoute={this.props.location.pathname} />
         <Switch>
           <Route exact path="/" component={Games} />
+          <Route path="/games/:title" component={GameItemPage} />
           <Route path="/games" component={Games} />
           <Route path="/movies/:title" component={MovieItemPage} />
           <Route path="/movies" component={Movies} />

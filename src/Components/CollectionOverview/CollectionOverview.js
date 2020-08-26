@@ -1,10 +1,10 @@
 import React from "react";
 import "./CollectionOverview.scss";
 import CollectionPreview from "../CollectionPreview/CollectionPreview";
-import {connect} from 'react-redux';
-import {selectCollectionData} from '../../Redux/Collection/collection-selectors';
+import { connect } from 'react-redux';
+import { selectCollectionData } from '../../Redux/Collection/collection-selectors';
 
-const CollectionOverview = ({ movies, tvshow, collection }) => (
+const CollectionOverview = ({ games, movies, tvshow, collection }) => (
   <div className="collection-overview">
     {collection.map(items => (
       <CollectionPreview
@@ -12,6 +12,7 @@ const CollectionOverview = ({ movies, tvshow, collection }) => (
         title={items.title}
         start={items.start}
         end={items.end}
+        games={games}
         movies={movies}
         tvshow={tvshow}
       />

@@ -1,7 +1,9 @@
+// REVIEWED
+
 import React from "react";
 import "./CollectionGrid.scss";
 import CollectionGridItem from "../CollectionGridItem/CollectionGridItem";
-import CollectionGridItem2 from "../CollectionGridItem/CollectionGridItem2";
+//import CollectionGridItem2 from "../CollectionGridItem/CollectionGridItem2";
 import { connect } from "react-redux";
 import { selectGameGridItems } from "../../Redux/Game/game-selectors";
 import { selectMovieGridItems } from "../../Redux/Movie/movie-selectors";
@@ -34,18 +36,18 @@ class CollectionGrid extends React.Component {
           <div className="collection-grid__inner">
             {games
               ? gameGridItems.map(item => (
-                  <CollectionGridItem2 key={item.id} item={item} />
-                ))
+                <CollectionGridItem key={item.id} item={item} demo />
+              ))
               : null}
             {movies
               ? movieGridItems.map(item => (
-                  <CollectionGridItem key={item.id} item={item} />
-                ))
+                <CollectionGridItem key={item.id} item={item} />
+              ))
               : null}
             {tvshow
               ? tvShowGridItems.map(item => (
-                  <CollectionGridItem key={item.id} item={item} />
-                ))
+                <CollectionGridItem key={item.id} item={item} />
+              ))
               : null}
           </div>
           <span className="collection-grid__right-arrow">
