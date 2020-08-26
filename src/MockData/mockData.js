@@ -57,7 +57,7 @@ const MOCK_DATA = [
                             credit_id: "5cab21a50e0a264c7df637a6",
                             gender: 2,
                             id: 1117313,
-                            name: "John David Washington",
+                            name: "Penguin 3",
                             order: 0,
                             profile_path: "/27C77ni5XmlgkJVbomXPC4tHWVd.jpg"
                         }
@@ -66,11 +66,11 @@ const MOCK_DATA = [
 
                 original_language: "en",
                 original_title: "Project Power 1",
-                overview: "",
+                overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "aaa",
+                title: "Penguin Game 1",
                 video: false,
                 videos: {
                     results: []
@@ -106,7 +106,7 @@ const MOCK_DATA = [
                 },
                 original_language: "en",
                 original_title: "Project Power 2",
-                overview: "bbb",
+                overview: "An ex-soldier, a teen and a cop collide in New Orleans as they hunt for the source behind a dangerous new pill that grants users temporary superpowers.",
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
