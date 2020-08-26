@@ -5,7 +5,7 @@ import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../Config/config";
 import "./CollectionGridItem.scss";
 import AddToList from "../AddToList/AddToList";
 
-import { BANNER_GALLERY } from "../../MockData/mockData";
+import { BANNER_GALLERY, POSTER_GALLERY } from "../../MockData/mockData";
 
 // NOTE: There is a CollectionGridItem2!
 const CollectionGridItem = ({ item, listItems, addItem, demo }) => {
@@ -44,7 +44,7 @@ const CollectionGridItem = ({ item, listItems, addItem, demo }) => {
           className="grid-item__img_demo"
         />
         <img
-          src={BANNER_GALLERY[id - 1]}
+          src={POSTER_GALLERY[id - 1]}
           alt="game"
           className="grid-item__img_demo grid-item__mobile-img_demo"
         />

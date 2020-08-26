@@ -28,6 +28,10 @@
   -ms-transition: width 0.55s ease;
   -o-transition: width 0.55s ease;
   transition: width 0.55s ease;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .container-2 input#search::-webkit-input-placeholder {

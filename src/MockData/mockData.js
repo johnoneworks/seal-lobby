@@ -14,6 +14,8 @@ import GRID_8 from "./8_med.jpg";
 import GRID_9 from "./9_med.jpg";
 import GRID_10 from "./10_med.jpg";
 
+import POSTER_1 from "./1_med_vert.png";
+
 import PROFILE_1 from "./1_small.jpg";
 
 const BANNER_GALLERY = [
@@ -36,10 +38,10 @@ const GRID_GALLERY = [
 ];
 
 const POSTER_GALLERY = [
-    GRID_1,
-    GRID_2,
-    GRID_3,
-    GRID_4
+    POSTER_1,
+    POSTER_1,
+    POSTER_1,
+    POSTER_1
 ];
 
 const PROFILE_GALLERY = [
