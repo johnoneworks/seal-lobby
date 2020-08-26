@@ -1,6 +1,6 @@
 import BANNER_1 from "./1_big.jpg";
-import PW_B from "./PW_B.jpg";
-import SG_B from "./SG_B.jpg";
+import BANNER_2 from "./2_big.jpg";
+import BANNER_3 from "./3_big.jpg";
 import PG_B from "./PG_B.png";
 
 import GRID_1 from "./1_med.jpg";
@@ -12,8 +12,8 @@ import PROFILE_1 from "./1_small.jpg";
 
 const BANNER_GALLERY = [
     BANNER_1,
-    BANNER_1,
-    BANNER_1,
+    BANNER_2,
+    BANNER_3,
     BANNER_1
 ];
 
