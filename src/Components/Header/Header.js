@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import Logo from "../../Assets/logo.png";
-import Logo from "../../Assets/owLogo.png";
+//import Logo from "../../Assets/owLogo.png";
+import Logo from "../../Assets/SABA_logo.png";
 import "./Header.scss";
 import { withRouter } from "react-router";
 import SearchBar from "../SearchBar/SearchBar";

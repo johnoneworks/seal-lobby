@@ -5,37 +5,37 @@ const INITIAL_STATE = {
       id: 1,
       title: "Popular",
       start: 0,
-      end: 10
+      end: 5
     },
     {
       id: 2,
       title: "Top Rated",
-      start: 10,
-      end: 20
+      start: 5,
+      end: 7
     },
     {
       id: 3,
       title: "New Releases",
-      start: 20,
-      end: 30
+      start: 7,
+      end: 9
     },
     {
       id: 4,
       title: "You Might Like This",
-      start: 30,
-      end: 40
+      start: 9,
+      end: 10
     },
     {
       id: 5,
       title: "Since You've Played PP",
-      start: 40,
-      end: 50
+      start: 0,
+      end: 5
     },
     {
       id: 6,
       title: "Trending Now",
-      start: 50,
-      end: 60
+      start: 6,
+      end: 10
     }
   ]
 };
