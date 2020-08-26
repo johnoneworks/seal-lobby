@@ -4,9 +4,9 @@ import BANNER_3 from "./3_big.jpg";
 import PG_B from "./PG_B.png";
 
 import GRID_1 from "./1_med.jpg";
-import PW_G from "./PW_G.jpg";
-import SG_G from "./SG_G.jpg";
-import PG_G from "./PG_G.jpg";
+import GRID_2 from "./2_med.jpg";
+import GRID_3 from "./3_med.jpg";
+import GRID_4 from "./4_med.jpg";
 
 import PROFILE_1 from "./1_small.jpg";
 
@@ -19,16 +19,16 @@ const BANNER_GALLERY = [
 
 const GRID_GALLERY = [
     GRID_1,
-    GRID_1,
-    GRID_1,
-    GRID_1
+    GRID_2,
+    GRID_3,
+    GRID_4
 ];
 
 const POSTER_GALLERY = [
     GRID_1,
-    GRID_1,
-    GRID_1,
-    GRID_1
+    GRID_2,
+    GRID_3,
+    GRID_4
 ];
 
 const PROFILE_GALLERY = [
