@@ -35,7 +35,7 @@ class CollectionGrid extends React.Component {
         <div className="collection-grid__outer" ref={this.gridRef}>
           <div className="collection-grid__inner">
             {games
-              ? gameGridItems.map(item => (
+              ? gameGridItems.filter(item => item.id < 4).map(item => (
                 <CollectionGridItem key={item.id} item={item} demo />
               ))
               : null}
