@@ -109,7 +109,7 @@ const ItemPageFooter = ({
           className="item-page-footer__btn"
         >
           <FontAwesomeIcon icon={faPlay} className="item-page-footer__icon" />
-          Watch Trailer
+          Play Now
         </button>
       </div>
     </div>

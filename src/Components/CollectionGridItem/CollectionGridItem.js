@@ -48,10 +48,7 @@ const CollectionGridItem = ({ item, listItems, addItem, demo }) => {
           alt="game"
           className="grid-item__img_demo grid-item__mobile-img_demo"
         />
-        <div className={`${title ? "grid-item__movie-text" : "grid-item__tv-text"}`}>
-          <h1 className="grid-item__title">{title}</h1>
-          <h1 className="grid-item__title">{name}</h1>
-          <span className="grid-item__overview">{overview}</span>
+        <div className="grid-item__movie-text">
           <AddToList item={item} />
         </div>
       </div>

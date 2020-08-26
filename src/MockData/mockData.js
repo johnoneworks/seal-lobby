@@ -110,7 +110,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "ccc",
+                title: "PP3",
                 video: false,
                 vote_average: 6.8,
                 vote_count: 727,
