@@ -42,7 +42,7 @@ class SearchBar extends React.Component {
             onChange={this.handleChange}
             type="search"
             id="search"
-            placeholder="Movies, TV Shows..."
+            placeholder="Titles, Providers..."
           />
         </div>
       </div>

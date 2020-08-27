@@ -25,7 +25,8 @@ import POSTER_8 from "./8_med_vert.png";
 import POSTER_9 from "./9_med_vert.png";
 import POSTER_10 from "./10_med_vert.png";
 
-import PROFILE_1 from "./1_small.jpg";
+
+
 
 const BANNER_GALLERY = [
     BANNER_1,
@@ -47,6 +48,19 @@ const GRID_GALLERY = [
 ];
 
 const POSTER_GALLERY = [
+    POSTER_1,
+    POSTER_2,
+    POSTER_3,
+    POSTER_4,
+    POSTER_5,
+    POSTER_6,
+    POSTER_7,
+    POSTER_8,
+    POSTER_9,
+    POSTER_10
+];
+
+const POSTER_GALLERY_TEST = [
     POSTER_1,
     POSTER_2,
     POSTER_3,
@@ -493,4 +507,4 @@ const MOCK_DATA = [
     },
 ];
 
-export { MOCK_DATA, BANNER_GALLERY, GRID_GALLERY, POSTER_GALLERY, PROFILE_GALLERY };
+export { MOCK_DATA, BANNER_GALLERY, GRID_GALLERY, POSTER_GALLERY, PROFILE_GALLERY, POSTER_GALLERY_TEST };

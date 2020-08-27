@@ -6,7 +6,7 @@ import {
   BACKDROP_SIZE,
   POSTER_SIZE
 } from "../../Config/config";
-import { BANNER_GALLERY, POSTER_GALLERY } from "../../MockData/mockData";
+import { BANNER_GALLERY, POSTER_GALLERY, POSTER_GALLERY_TEST } from "../../MockData/mockData";
 import "./ItemPage.scss";
 import { connect } from "react-redux";
 import imdb from "../../Assets/imdb.png";
@@ -46,6 +46,7 @@ class ItemPage extends React.Component {
     console.log(`demo is ${demo}`);
     console.log(this.props);
     const {
+      id,
       title,
       name,
       overview,
@@ -59,79 +60,81 @@ class ItemPage extends React.Component {
 
     const poster = `${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`;
 
-    if (!demo) {
-      return (
-        <div className="item-page">
-          <img
-            src={BANNER_GALLERY[Math.floor(Math.random() * BANNER_GALLERY.length)]}
-            alt="background"
-            className="item-page__bg"
-          />
-          <div className="item">
-            <Fade>
-              <div className="item__outer">
-                <div className="item__inner">
-                  <div className="item__img-box">
-                    <img src={POSTER_GALLERY[Math.floor(Math.random() * POSTER_GALLERY.length)]} alt="poster" className="item__poster-img" />
+    /*
+    return (
+      <div className="item-page">
+        <img
+          src={background}
+          alt="background"
+          className="item-page__bg"
+        />
+        <div className="item">
+          <Fade>
+            <div className="item__outer">
+              <div className="item__inner">
+                <div className="item__img-box">
+                  <img src={poster} alt="poster" className="item__poster-img" />
+                </div>
+                <div className="item__text-box">
+                  <h1 className="item__title">{title}</h1>
+                  <h1 className="item__title">{name}</h1>
+                  <span className="item__overview">{overview}</span>
+                  <div className="item-rating">
+                    <img src={imdb} alt="imdb" className="item-rating__imdb" />
+                    <span className="item-rating__rank">{vote_average}/</span>
+                    <span className="item-rating__ten">10</span>
+                    <img src={star} alt="imdb" className="item-rating__star" />
                   </div>
-                  <div className="item__text-box">
-                    <h1 className="item__title">{title}</h1>
-                    <h1 className="item__title">{name}</h1>
-                    <span className="item__overview">{overview}</span>
-                    <div className="item-rating">
-                      <img src={imdb} alt="imdb" className="item-rating__imdb" />
-                      <span className="item-rating__rank">{vote_average}/</span>
-                      <span className="item-rating__ten">10</span>
-                      <img src={star} alt="imdb" className="item-rating__star" />
-                    </div>
-                    <h1 className="item__cast-title">Cast</h1>
-                    <ItemPageFooter games={games} movies={movies} tvshow={tvshow} item={item} />
-                  </div>
+                  <h1 className="item__cast-title">Cast</h1>
+                  <ItemPageFooter games={games} movies={movies} tvshow={tvshow} item={item} />
                 </div>
               </div>
-            </Fade>
-          </div>
+            </div>
+          </Fade>
         </div>
-      );
-    }
+      </div>
+    );
+    */
 
-    if (demo) {
-      return (
-        <div className="item-page">
-          <img
-            src={BANNER_GALLERY[Math.floor(Math.random() * BANNER_GALLERY.length)]}
-            alt="background"
-            className="item-page__bg"
-          />
-          <div className="item">
-            <Fade>
-              <div className="item__outer">
-                <div className="item__inner">
-                  <div className="item__img-box">
-                    <img src={POSTER_GALLERY[Math.floor(Math.random() * POSTER_GALLERY.length)]} alt="poster" className="item__poster-img" />
-                  </div>
-                  <div className="item__text-box">
-                    <h1 className="item__title">{title}</h1>
-                    <h1 className="item__title">{name}</h1>
-                    <span className="item__overview">{overview}</span>
-                    <div className="item-rating">
-                      <span className="item-rating__rank">{vote_average / 2} / 5</span>
+    let imgIndex = Math.floor(Math.random() * BANNER_GALLERY.length);
 
-                    </div>
-                    <Rating
-                      emptySymbol="fa fa-star-o fa-2x"
-                      fullSymbol="fa fa-star fa-2x"
-                    />
-                    <h1 className="item__cast-title">Others Also Liked</h1>
-                    <ItemPageFooter games={games} movies={movies} tvshow={tvshow} item={item} />
+    return (
+      <div className="item-page">
+        <img
+          src={BANNER_GALLERY[imgIndex]}
+          alt="background"
+          className="item-page__bg"
+        />
+        <div className="item">
+          <Fade>
+            <div className="item__outer">
+              <div className="item__inner">
+                <div className="item__img-box">
+                  <img src={POSTER_GALLERY_TEST[imgIndex]} alt="poster" className="item__poster-img" />
+                </div>
+                <div className="item__text-box">
+                  <h1 className="item__title">{title}</h1>
+                  <h1 className="item__title">{name}</h1>
+                  <span className="item__overview">{overview}</span>
+                  <div className="item-rating">
+                    <span className="item-rating__rank">{vote_average / 2} / 5</span>
+
                   </div>
+                  <Rating
+                    emptySymbol="fa fa-star-o fa-2x"
+                    fullSymbol="fa fa-star fa-2x"
+                  />
+                  
+                  <h1 className="item__cast-title">Others Also Liked</h1>
+                  <ItemPageFooter games={games} movies={movies} tvshow={tvshow} item={item} />
                 </div>
               </div>
-            </Fade>
-          </div>
+            </div>
+          </Fade>
         </div>
-      );
-    }
+      </div>
+    );
+
   }
 }
 

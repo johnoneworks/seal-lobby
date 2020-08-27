@@ -18,15 +18,18 @@ const ListItem = ({ item, history, removeItem, demo }) => {
   console.log(id);
   var titlePath = title ? FixString(title) : null;
   var namePath = name ? FixString(name) : null;
+  let imgIndex = Math.floor(Math.random() * POSTER_GALLERY.length);
   return (
     <div className="list-item">
       <div className="list-item__rating-container">
-        <span className="list-item__rating">
-          <img src={imdb} alt="imdb" className="list-item__imdb" />
-          <span className="list-item__rank">{vote_average}/</span>
-          <span className="list-item__ten">10</span>
-          <img src={star} alt="imdb" className="list-item__star" />
-        </span>
+        {!demo &&
+          <span className="list-item__rating">
+            <img src={imdb} alt="imdb" className="list-item__imdb" />
+            <span className="list-item__rank">{vote_average}/</span>
+            <span className="list-item__ten">10</span>
+            <img src={star} alt="imdb" className="list-item__star" />
+          </span>
+        }
       </div>
       <div className="list-item__addtolist" onClick={() => removeItem(item)}>
         <FontAwesomeIcon icon={faTimes} className="list-item__remove-icon" />
@@ -56,7 +59,7 @@ const ListItem = ({ item, history, removeItem, demo }) => {
           }}
         >
           <img
-            src={POSTER_GALLERY[Math.floor(Math.random() * POSTER_GALLERY.length)]}
+            src={POSTER_GALLERY[imgIndex]}
             alt="game"
             className="list-item__img"
           />

@@ -28,20 +28,21 @@ const Header = ({ history, currentUser, currentRoute, hidden, ToggleMenuHidden }
       <div className="header__options">
         <div className="header__options-primary">
           <Link className="header__option" to="/games">
-            Games
+            All Games
           </Link>
 
           <Link className="header__option" to="/mylist">
             My List
           </Link>
 
-          <Link className="header__option" to="/movies">
-            Movies
+          <Link className="header__option" to="/games">
+            Promotions
           </Link>
 
-          <Link className="header__option" to="/tvshows">
-            TV Shows
+          <Link className="header__option" to="/games">
+            Statements
           </Link>
+
 
 
         </div>

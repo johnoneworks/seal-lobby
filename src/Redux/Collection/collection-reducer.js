@@ -3,39 +3,39 @@ const INITIAL_STATE = {
   collection: [
     {
       id: 1,
-      title: "Popular",
+      title: "Recently Played",
       start: 0,
-      end: 5
+      end: 10
     },
     {
       id: 2,
       title: "Top Rated",
-      start: 5,
-      end: 7
+      start: 2,
+      end: 9
     },
     {
       id: 3,
       title: "New Releases",
-      start: 7,
-      end: 9
+      start: 6,
+      end: 10
     },
     {
       id: 4,
       title: "You Might Like This",
-      start: 9,
-      end: 10
+      start: 1,
+      end: 8
     },
     {
       id: 5,
-      title: "Since You've Played PP",
-      start: 0,
-      end: 5
+      title: "Since You've Played PP Jackpot",
+      start: 4,
+      end: 9
     },
     {
       id: 6,
       title: "Trending Now",
-      start: 6,
-      end: 10
+      start: 4,
+      end: 8
     }
   ]
 };

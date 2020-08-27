@@ -21,6 +21,8 @@ class ItemPageCast extends React.Component {
     const { profile_path, name, demo } = this.props;
     const profileUrl = `${IMAGE_BASE_URL}${PROFILE_SIZE}`;
     const style = this.state.didLoad ? {} : { visibility: "hidden" };
+
+    let imgIndex = Math.floor(Math.random() * PROFILE_GALLERY.length);
     if (!demo) {
       return (
         <div className="cast">
@@ -42,7 +44,7 @@ class ItemPageCast extends React.Component {
         <div className="cast">
           <div className="cast__img-box">
             <img
-              src={PROFILE_GALLERY[Math.floor(Math.random() * PROFILE_GALLERY.length)]}
+              src={PROFILE_GALLERY[imgIndex]}
               style={style}
               alt="profile"
               className="cast__img"

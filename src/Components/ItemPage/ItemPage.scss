@@ -5,8 +5,7 @@
 
   &__bg {
     min-height: 100%;
-    min-width: 1024px;
-    filter: blur(1.3px) brightness(60%);
+    filter: blur(0.3px) brightness(80%);
     width: 100%;
     height: auto;
     position: fixed;
@@ -14,9 +13,8 @@
     left: 0;
 
     @media screen and (max-width: 800px) {
-      left: 50%;
-      margin-left: -512px;
-      
+      width: 414px;
+      height: 736px;
     }
   }
 
