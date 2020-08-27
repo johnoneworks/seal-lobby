@@ -60,6 +60,10 @@
   margin-top: 11px;
   z-index: 1;
   color: #e5e5e5;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .container-2 input#search:focus,

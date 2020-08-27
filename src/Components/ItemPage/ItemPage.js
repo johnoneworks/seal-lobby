@@ -11,6 +11,7 @@ import "./ItemPage.scss";
 import { connect } from "react-redux";
 import imdb from "../../Assets/imdb.png";
 import star from "../../Assets/star.png";
+import Rating from "react-rating";
 import {
   selectGameCast,
   selectGameVideos
@@ -106,11 +107,14 @@ class ItemPage extends React.Component {
                     <h1 className="item__title">{name}</h1>
                     <span className="item__overview">{overview}</span>
                     <div className="item-rating">
-                      <span className="item-rating__rank">{vote_average}/</span>
-                      <span className="item-rating__ten">10</span>
-                      <img src={star} alt="imdb" className="item-rating__star" />
+                      <span className="item-rating__rank">{vote_average / 2} / 5</span>
+
                     </div>
-                    <h1 className="item__cast-title">You Might Like These</h1>
+                    <Rating
+                      emptySymbol="fa fa-star-o fa-2x"
+                      fullSymbol="fa fa-star fa-2x"
+                    />
+                    <h1 className="item__cast-title">Others Also Liked</h1>
                     <ItemPageFooter games={games} movies={movies} tvshow={tvshow} item={item} />
                   </div>
                 </div>
