@@ -35,9 +35,7 @@ const ItemPageFooter = ({
   listItems
 }) => {
   const existingItem = listItems.filter(listItem => listItem.id === item.id);
-  console.log("ItemPageFooter");
-  console.log(movies);
-  console.log(movieCast);
+
   return (
     <div className="item-page-footer">
       <div className="item-page-footer__container">

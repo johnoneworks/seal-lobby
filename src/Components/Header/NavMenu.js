@@ -26,12 +26,12 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
             Hi, {currentUser.displayName}
           </Link>
         ) : (
-          <Link className="overlay__username" to="">
-            Hi, Guest
-          </Link>
-        )}
+            <Link className="overlay__username" to="">
+              Hi, Guest
+            </Link>
+          )}
 
-        <Link className="overlay__option" to="games">
+        <Link className="overlay__option" to="/games">
           Games
         </Link>
 
@@ -47,7 +47,7 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
           TV Shows
         </Link>
 
-        
+
 
         {currentUser ? (
           <div
@@ -57,12 +57,12 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
             Sign Out
           </div>
         ) : (
-          <div>
-            <Link className="overlay__option" to="/signin">
-              Sign In
+            <div>
+              <Link className="overlay__option" to="/signin">
+                Sign In
             </Link>
-          </div>
-        )}
+            </div>
+          )}
       </div>
     </div>
   );

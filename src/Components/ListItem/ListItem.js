@@ -2,6 +2,7 @@ import React from "react";
 import "./ListItem.scss";
 import { withRouter } from "react-router";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../Config/config";
+import { POSTER_GALLERY } from "../../MockData/mockData";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import imdb from "../../Assets/imdb.png";
@@ -11,8 +12,10 @@ import { removeItem } from "../../Redux/List/list-actions";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
-const ListItem = ({ item, history, removeItem }) => {
+const ListItem = ({ item, history, removeItem, demo }) => {
   const { id, title, poster_path, vote_average, name } = item;
+  console.log("ListItem");
+  console.log(id);
   var titlePath = title ? FixString(title) : null;
   var namePath = name ? FixString(name) : null;
   return (
@@ -28,21 +31,37 @@ const ListItem = ({ item, history, removeItem }) => {
       <div className="list-item__addtolist" onClick={() => removeItem(item)}>
         <FontAwesomeIcon icon={faTimes} className="list-item__remove-icon" />
       </div>
-
-      <div
-        className="list-item__img-box"
-        onClick={() => {
-          return title
-            ? history.push({ pathname: `/movies/${titlePath}`, state: { id } })
-            : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });
-        }}
-      >
-        <img
-          src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
-          alt="movie"
-          className="list-item__img"
-        />
-      </div>
+      {!demo &&
+        <div
+          className="list-item__img-box"
+          onClick={() => {
+            return title
+              ? history.push({ pathname: `/movies/${titlePath}`, state: { id } })
+              : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });
+          }}
+        >
+          <img
+            src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
+            alt="movie"
+            className="list-item__img"
+          />
+        </div>
+      }
+      {demo &&
+        <div
+          className="list-item__img-box"
+          onClick={() => {
+            console.log("ListItem Onclick");
+            return history.push({ pathname: `/games/${titlePath}`, state: { id } });
+          }}
+        >
+          <img
+            src={POSTER_GALLERY[Math.floor(Math.random() * POSTER_GALLERY.length)]}
+            alt="game"
+            className="list-item__img"
+          />
+        </div>
+      }
 
       <div className="list-item__text">
         <h1 className="list-item__title">{title}</h1>

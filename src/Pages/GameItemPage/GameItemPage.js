@@ -18,7 +18,9 @@ class GameItemPage extends React.Component {
 
   render() {
     const { isFetching } = this.props;
-    console.log(this.props.isFetching);
+    console.log("GameItemPage render");
+    console.log(this.props.location);
+    console.log(this.props.location.state);
     return (
       <div className="movie-item-page">
         <ItemPageOverviewContainer

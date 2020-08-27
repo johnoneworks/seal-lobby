@@ -17,7 +17,7 @@ const ListOverview = ({ listItems, currentUser }) => {
         {currentUser ? (
           <div className="list-overview__inner">
             {listItems.map(item => (
-              <ListItem key={item.id} item={item} />
+              <ListItem key={item.id} item={item} demo />
             ))}
           </div>
         ) : null}

@@ -1,4 +1,4 @@
-// REVIEWED, 90% confidence
+// REVIEWED, 70% confidence, getting list is really weird
 
 import React from "react";
 import {
@@ -42,6 +42,9 @@ class ItemPage extends React.Component {
 
   render() {
     const { item, games, movies, tvshow, demo } = this.props;
+    console.log("ItemPage");
+    console.log(`demo is ${demo}`);
+    console.log(this.props);
     const {
       title,
       name,
@@ -50,13 +53,17 @@ class ItemPage extends React.Component {
       poster_path,
       vote_average
     } = item;
+    // Put this back in img src in the !demo
+    // This is temporary for a quick fix
     const background = `${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`;
+
     const poster = `${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`;
+
     if (!demo) {
       return (
         <div className="item-page">
           <img
-            src={`${background}`}
+            src={BANNER_GALLERY[Math.floor(Math.random() * BANNER_GALLERY.length)]}
             alt="background"
             className="item-page__bg"
           />
@@ -65,7 +72,7 @@ class ItemPage extends React.Component {
               <div className="item__outer">
                 <div className="item__inner">
                   <div className="item__img-box">
-                    <img src={`${poster}`} alt="poster" className="item__poster-img" />
+                    <img src={POSTER_GALLERY[Math.floor(Math.random() * POSTER_GALLERY.length)]} alt="poster" className="item__poster-img" />
                   </div>
                   <div className="item__text-box">
                     <h1 className="item__title">{title}</h1>
@@ -87,6 +94,7 @@ class ItemPage extends React.Component {
         </div>
       );
     }
+
     if (demo) {
       return (
         <div className="item-page">

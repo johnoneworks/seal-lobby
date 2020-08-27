@@ -9,6 +9,12 @@ import { selectListGameByTitle, selectListMovieByTitle, selectListTVShowByTitle 
 
 const ItemPageOverview = ({ gameItemByTitle, movieItemByTitle, tvItemByTitle, games, movies, tvshow, searchedGameItemByTitle, searchedMovieItemByTitle,
 	searchedTvItemByTitle, listGameItemByTitle, listMovieItemByTitle, listTvItemByTitle }) => {
+	console.log("ItemPageOverview");
+	console.log(`games: ${games}`);
+	console.log(`gameItemByTitle: ${gameItemByTitle}`);
+	console.log(`searchedGameItemByTitle: ${searchedGameItemByTitle}`);
+	console.log(`listGameItemByTitle: ${listGameItemByTitle}`);
+
 	return (
 		<div className="item-page-overview">
 			{

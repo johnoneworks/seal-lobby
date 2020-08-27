@@ -1,7 +1,7 @@
 import BANNER_1 from "./1_big.jpg";
 import BANNER_2 from "./2_big.jpg";
 import BANNER_3 from "./3_big.jpg";
-import PG_B from "./PG_B.png";
+
 
 import GRID_1 from "./1_med.jpg";
 import GRID_2 from "./2_med.jpg";
@@ -15,6 +15,10 @@ import GRID_9 from "./9_med.jpg";
 import GRID_10 from "./10_med.jpg";
 
 import POSTER_1 from "./1_med_vert.png";
+import POSTER_2 from "./2_med_vert.png";
+import POSTER_3 from "./3_med_vert.png";
+import POSTER_4 from "./4_med_vert.png";
+import POSTER_5 from "./5_med_vert.png";
 
 import PROFILE_1 from "./1_small.jpg";
 
@@ -39,9 +43,10 @@ const GRID_GALLERY = [
 
 const POSTER_GALLERY = [
     POSTER_1,
-    POSTER_1,
-    POSTER_1,
-    POSTER_1
+    POSTER_2,
+    POSTER_3,
+    POSTER_4,
+    POSTER_5
 ];
 
 const PROFILE_GALLERY = [
@@ -123,7 +128,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "PP3",
+                title: "SEAL 2",
                 video: false,
                 vote_average: 6.8,
                 vote_count: 727,
@@ -160,7 +165,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Project Power 3",
+                title: "Cat 3",
                 video: false,
                 vote_average: 6.8,
                 vote_count: 727,
@@ -200,7 +205,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 4",
+                title: "Dog 4",
                 video: false,
                 videos: {
                     results: []
@@ -243,7 +248,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Elephant 1",
                 video: false,
                 videos: {
                     results: []
@@ -286,7 +291,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Fox 6",
                 video: false,
                 videos: {
                     results: []
@@ -329,7 +334,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Giraffe 7",
                 video: false,
                 videos: {
                     results: []
@@ -372,7 +377,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Hippo 8",
                 video: false,
                 videos: {
                     results: []
@@ -415,7 +420,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Iguana 9",
                 video: false,
                 videos: {
                     results: []
@@ -458,7 +463,7 @@ const MOCK_DATA = [
                 popularity: 237.38,
                 poster_path: "/bOKjzWDxiDkgEQznhzP4kdeAHNI.jpg",
                 release_date: "2020-08-14",
-                title: "Penguin Game 1",
+                title: "Jackass 10",
                 video: false,
                 videos: {
                     results: []
