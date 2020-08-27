@@ -19,6 +19,11 @@ import POSTER_2 from "./2_med_vert.png";
 import POSTER_3 from "./3_med_vert.png";
 import POSTER_4 from "./4_med_vert.png";
 import POSTER_5 from "./5_med_vert.png";
+import POSTER_6 from "./6_med_vert.png";
+import POSTER_7 from "./7_med_vert.png";
+import POSTER_8 from "./8_med_vert.png";
+import POSTER_9 from "./9_med_vert.png";
+import POSTER_10 from "./10_med_vert.png";
 
 import PROFILE_1 from "./1_small.jpg";
 
@@ -46,14 +51,25 @@ const POSTER_GALLERY = [
     POSTER_2,
     POSTER_3,
     POSTER_4,
-    POSTER_5
+    POSTER_5,
+    POSTER_6,
+    POSTER_7,
+    POSTER_8,
+    POSTER_9,
+    POSTER_10
 ];
 
 const PROFILE_GALLERY = [
-    PROFILE_1,
-    PROFILE_1,
-    PROFILE_1,
-    PROFILE_1,
+    POSTER_1,
+    POSTER_2,
+    POSTER_3,
+    POSTER_4,
+    POSTER_5,
+    POSTER_6,
+    POSTER_7,
+    POSTER_8,
+    POSTER_9,
+    POSTER_10
 ];
 
 const MOCK_DATA = [

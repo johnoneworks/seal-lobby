@@ -1,4 +1,5 @@
 import GameActionTypes from "./game-types";
+import { MOCK_DATA } from "../../MockData/mockData";
 
 const INITIAL_STATE = {
   isFetching: false,
@@ -31,16 +32,26 @@ const gameReducer = (state = INITIAL_STATE, action) => {
 
         gameCast: (payload && payload.credits)
           ? payload.credits.cast
-          : [{
-            cast_id: 12,
-            character: "The Protagonist",
-            credit_id: "5cab21a50e0a264c7df637a6",
-            gender: 2,
-            id: 1117313,
-            name: "Penguin 2",
-            order: 0,
-            profile_path: "/27C77ni5XmlgkJVbomXPC4tHWVd.jpg"
-          }],
+          
+          : [
+            MOCK_DATA[Math.floor(Math.random() * MOCK_DATA.length)].results[0].credits.cast[0],
+            MOCK_DATA[Math.floor(Math.random() * MOCK_DATA.length)].results[0].credits.cast[0],
+            MOCK_DATA[Math.floor(Math.random() * MOCK_DATA.length)].results[0].credits.cast[0]
+          ],
+          
+        /*
+        : [{
+          cast_id: 12,
+          character: "The Protagonist",
+          credit_id: "5cab21a50e0a264c7df637a6",
+          gender: 2,
+          id: 1117313,
+          name: "Penguin 2",
+          order: 0,
+          profile_path: "/27C77ni5XmlgkJVbomXPC4tHWVd.jpg"
+        }],
+        */
+        
 
 
         gameVideos: (payload && payload.videos && payload.videos.result)
